@@ -116,7 +116,7 @@ describe("getId()", () => {
     })
 })
 
-describe("getgithub()", () => {
+describe("getGithub()", () => {
   it("should always return type 'github'", ()=>{
       const name = "Eileen"
       const email = "eileenrdolan@gmail.com"
@@ -124,7 +124,7 @@ describe("getgithub()", () => {
       const github = "ereneedolan"
       const employee = new Engineer(name, email, id, github);
 
-      expect(employee.getgithub()).toEqual(github);
+      expect(employee.getGithub()).toEqual(`https://github.com/${github}`);
   })
 })
 

@@ -16,19 +16,19 @@ describe("Employee", () => {
         const email = "eileenrdolan@gmail.com"
         const id = "001"
       
-        const employee = new Employee("Eileen", "eileenrdolan@gmail.com", "001");
+        const employee = new Employee(name, email, id);
 
-        expect(employee.name).toEqual("Eileen");
-        expect(employee.email).toEqual("eileenrdolan@gmail.com");
-        expect(employee.id).toEqual("001");
+        expect(employee.name).toEqual(name);
+        expect(employee.email).toEqual(email);
+        expect(employee.id).toEqual(id);
 
     });
 
-//     it("should throw an error if provided no arguments", () => {
-//       const cb = () => new Employee();
+    it("should throw an error if provided no arguments", () => {
+      const cb = () => new Employee();
 
-//       expect(cb).toThrow();
-//     });
+      expect(cb).toThrow();
+    });
 
 //     it("should throw an error if not provided an age", () => {
 //       const cb = () => new Employee("Eileen");

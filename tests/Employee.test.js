@@ -30,32 +30,34 @@ describe("Employee", () => {
       expect(cb).toThrow();
     });
 
-//     it("should throw an error if not provided an age", () => {
-//       const cb = () => new Employee("Eileen");
-//       const err = new Error("Expected parameter 'age' to be a non-negative number");
+    it("should throw an error if not provided an name", () => {
+        const name = ""
+        const email = "eileenrdolan@gmail.com"
+        const id = "001"
+        const cb = () => new Employee(name, email, id);
+        const err = new Error("Expected parameter 'name' to be a non-empty string");
 
-//       expect(cb).toThrowError(err);
-//     });
+      expect(cb).toThrowError(err);
+    });
 
-//     it("should throw an error if 'name' is not a string", () => {
-//       const cb = () => new Employee(3, 2);
-//       const err = new Error("Expected parameter 'name' to be a non-empty string");
+    it("should throw an error if not provided an email", () => {
+        const name = "Eileen"
+        const email = ""
+        const id = "001"
+        const cb = () => new Employee(name, email, id);
+        const err = new Error("Expected parameter 'email' to be a non-empty string");
 
-//       expect(cb).toThrowError(err);
-//     });
+      expect(cb).toThrowError(err);
+    });
 
-//     it("should throw an error if 'age' is not a number", () => {
-//       const cb = () => new Employee("Sarah", "2");
-//       const err = new Error("Expected parameter 'age' to be a non-negative number");
+    it("should throw an error if not provided an id", () => {
+        const name = "Eileen"
+        const email = "eileenrdolan@gmail.com"
+        const id = ""
+        const cb = () => new Employee(name, email, id);
+        const err = new Error("Expected parameter 'id' to be a non-empty string");
 
-//       expect(cb).toThrowError(err);
-//     });
-
-//     it("should throw an error if 'age' is less than 0", () => {
-//       const cb = () => new Employee("Sarah", -1);
-//       const err = new Error("Expected parameter 'age' to be a non-negative number");
-
-//       expect(cb).toThrowError(err);
-//     });
+      expect(cb).toThrowError(err);
+    });
   });
  });

@@ -59,5 +59,54 @@ describe("Employee", () => {
 
       expect(cb).toThrowError(err);
     });
+
+    describe("getName()", () => {
+        it("should always return type 'name'", ()=>{
+            const name = "Eileen"
+            const email = "eileenrdolan@gmail.com"
+            const id = "001"
+
+            const employee = new Employee(name, email, id);
+
+            expect(employee.getName()).toEqual(name);
+        })
+    })
+
+    describe("getEmail()", () => {
+        it("should always return type 'email'", ()=>{
+            const name = "Eileen"
+            const email = "eileenrdolan@gmail.com"
+            const id = "001"
+
+            const employee = new Employee(name, email, id);
+
+            expect(employee.getEmail()).toEqual(email);
+        })
+    })
+
+    describe("getId()", () => {
+        it("should always return type 'id'", ()=>{
+            const name = "Eileen"
+            const email = "eileenrdolan@gmail.com"
+            const id = "001"
+
+            const employee = new Employee(name, email, id);
+
+            expect(employee.getId()).toEqual(id);
+        })
+    })
+
+    describe("getRole()", () => {
+        it("should always return type 'Employee'", ()=>{
+            const name = "Eileen"
+            const email = "eileenrdolan@gmail.com"
+            const id = "001"
+
+            const employee = new Employee(name, email, id);
+
+            expect(employee.getRole()).toEqual('Employee');
+        })
+    })
+    
   });
  });

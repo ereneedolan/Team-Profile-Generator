@@ -36,6 +36,24 @@ fs.writeFile('./dist/index.html', team.getHTML(), (err=> {
     </body>        
     
     `
+buildTeam(){ return new Promise((resolve,reject)=>{
+    (async ()=>{
+    console.clear();
+    console.log(`Welcome to the Team Profile Generator!`)
+    console.log(`
+    You can use the team profile generator to build your team by entering each member\n` +
+    `please eneter each member's role and follow the prompted questions\n` +
+    `Once you add each member an HTML will be generated\n`));
+    
+    this.employees.push(new Manager(
+            await promptInput("Please enter the Manager's Name:", true),
+            await promptInput("Please enter the Manager's Email:", true),
+            await promptInput("Please enter the Manager's Id:", true),
+            await promptInput("Please enter the Manager's office number:", true)));
+        console.log(
+            (`\nManager added successfully!\n`)+
+            (`$this.employees.at(-1).tostring()}\n`));
+    
 
     let choice = '';
     while (choice !== 'Team Complete'{
@@ -43,18 +61,20 @@ fs.writeFile('./dist/index.html', team.getHTML(), (err=> {
     })
 
     if choice(==='Engineer'){
-        this.employees.psuh(new Engingeer(
+        this.employees.push(new Engingeer(
             await promptInput("Please enter the Engineer's Name:", true),
             await promptInput("Please enter the Engineer's Email:", true),
+            await promptInput("Please enter the Engineer's Id:", true),
             await promptInput("Please enter the Engineer's Github username:", true)));
         console.log(
-            (`\nIntern added successfully!\n`)+
+            (`\nEngineer added successfully!\n`)+
             (`$this.employees.at(-1).tostring()}\n`));
     }
     else if(choice ==='Intern'){
-        this.employees.psuh(new Engingeer(
+        this.employees.push(new Engingeer(
             await promptInput("Please enter the Intern's Name:", true),
             await promptInput("Please enter the Intern's Email:", true),
+            await promptInput("Please enter the Intern's Id:", true),
             await promptInput("Please enter the Interns school name:", true)));
         
         console.log(
@@ -63,6 +83,8 @@ fs.writeFile('./dist/index.html', team.getHTML(), (err=> {
     
     } else break;
     this.html = this.buildHTML();
+// })
+// })}
 
 }
 getEmployees({

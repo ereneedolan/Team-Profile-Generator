@@ -37,4 +37,34 @@ fs.writeFile('./dist/index.html', team.getHTML(), (err=> {
     
     `
 
+    let choice = '';
+    while (choice !== 'Team Complete'{
+        choice = await promptList("/nWhich team member would you like to add to the team?",['Engineer', 'Intern', 'Team Complete']);
+    })
+
+    if choice(==='Engineer'){
+        this.employees.psuh(new Engingeer(
+            await promptInput("Please enter the Engineer's Name:", true),
+            await promptInput("Please enter the Engineer's Email:", true),
+            await promptInput("Please enter the Engineer's Github username:", true)));
+        console.log(
+            (`\nIntern added successfully!\n`)+
+            (`$this.employees.at(-1).tostring()}\n`));
+    }
+    else if(choice ==='Intern'){
+        this.employees.psuh(new Engingeer(
+            await promptInput("Please enter the Intern's Name:", true),
+            await promptInput("Please enter the Intern's Email:", true),
+            await promptInput("Please enter the Interns school name:", true)));
+        
+        console.log(
+            (`\nIntern added successfully!\n`)+
+            (`$this.employees.at(-1).tostring()}\n`));
+    
+    } else break;
+    this.html = this.buildHTML();
+
 }
+getEmployees({
+    return this.employees
+})

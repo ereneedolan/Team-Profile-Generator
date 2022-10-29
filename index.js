@@ -1,92 +1,70 @@
+async function buildTeam(){
+    // Prompt for Manager info
+    //  name, email, id, #
+    // create manager object
+    // push to employee array
 
+    // Prompt user with a list of choices until he selects finished
+    //   for each choice prompt for id, name, email, and based on choice either github or school, create object, push top employee array
+    // Build Html string from employees array
+    // write html string to ./dist/index.html  
 
-constructor()
-this.employees
-this.html
+    const employees = [];
 
-this.employees.push(new Manager)
+    const managerName = await promptInput("Please Enter the Manager's Name:", true), 
+    const managerEmail = await promptInput("Please Enter the Manager's Name:", true); 
+    const managerOfficeNumber = await promptInput("Please Enter the Manager's Name:", true); 
 
-fs.writeFile('./dist/index.html', team.getHTML(), (err=> {
-    if (err)
-        console.log(err);
-    else ;    
-}))
-
-#buildHTML(){
-    let htmlStr = '';
-    htmlStr+=
-    `<!DOCTYPE html>
-        <html lang"en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-            <title>Team Profile Generator</title>
-    </head>
-    <body>
-        <section>
-            <div>
-                <h1>
-                </h1>
-            </div>
-        </section>
-    
-    
-    </body>        
-    
-    `
-buildTeam(){ return new Promise((resolve,reject)=>{
-    (async ()=>{
-    console.clear();
-    console.log(`Welcome to the Team Profile Generator!`)
-    console.log(`
-    You can use the team profile generator to build your team by entering each member\n` +
-    `please eneter each member's role and follow the prompted questions\n` +
-    `Once you add each member an HTML will be generated\n`));
-    
-    this.employees.push(new Manager(
-            await promptInput("Please enter the Manager's Name:", true),
-            await promptInput("Please enter the Manager's Email:", true),
-            await promptInput("Please enter the Manager's Id:", true),
-            await promptInput("Please enter the Manager's office number:", true)));
-        console.log(
-            (`\nManager added successfully!\n`)+
-            (`$this.employees.at(-1).tostring()}\n`));
-    
+    const manager = new Manager(managerName, managerEmail, managerOfficeNumber);
+     
+    employees.push(manager);
 
     let choice = '';
-    while (choice !== 'Team Complete'{
-        choice = await promptList("/nWhich team member would you like to add to the team?",['Engineer', 'Intern', 'Team Complete']);
-    })
+    while (choice !== 'Finished'){
+            choice = await promptList("\nWhich team member would you like to add to the team?",   ['Engineer', 'Intern', 'Finished']);
 
-    if choice(==='Engineer'){
-        this.employees.push(new Engingeer(
-            await promptInput("Please enter the Engineer's Name:", true),
-            await promptInput("Please enter the Engineer's Email:", true),
-            await promptInput("Please enter the Engineer's Id:", true),
-            await promptInput("Please enter the Engineer's Github username:", true)));
-        console.log(
-            (`\nEngineer added successfully!\n`)+
-            (`$this.employees.at(-1).tostring()}\n`));
-    }
-    else if(choice ==='Intern'){
-        this.employees.push(new Engingeer(
-            await promptInput("Please enter the Intern's Name:", true),
-            await promptInput("Please enter the Intern's Email:", true),
-            await promptInput("Please enter the Intern's Id:", true),
-            await promptInput("Please enter the Interns school name:", true)));
+            if (choice === 'Engineer'){
+                const engineerName = await promptInput("Please Enter the Manager's Name:", true), 
+                const engineerEmail = await promptInput("Please Enter the Manager's Name:", true); 
+                const engineerGitHub = await promptInput("Please Enter the Manager's Name:", true); 
+
+                const engineer = new Engineer(engineerName, managerEmail, engineerGitHub);
+
+                employees.push(engineer);
+            } 
+        }
+
+    // generate HTML string (HTML) with data from employees array    
+    let htmlString = '!<DOCTypeslkdlskdlsklds';
+    for(const employee of employees){
+        const role = employee.getRole(); 
+        // generate html card
+        // always display id, name, email
+        //
+        // if role = manager
+        //    display coffeee mug icon
+        //    display office number
+        //
+        // if role = engineer
+        //    display glasses icon
+        //    display github username, which is link to github page https://www.github.com/username
+        //
+        // if role = intern
+        //    display scholar icon
+        //    display school
+
+        htmlStr+=
+                `<div class="card has-background-white-ter">
+                    <header class="card-header is-flex is-flex-direction-column has-background-info pl-3">
+                        <h2 class="card-header-title has-text-white is-size-3 pb-0 ">${employee.getName()}</h2>
+                        <h2 class="card-header-title has-text-white is-size-5 pt-0">`;
+
         
-        console.log(
-            (`\nIntern added successfully!\n`)+
-            (`$this.employees.at(-1).tostring()}\n`));
-    
-    } else break;
-    this.html = this.buildHTML();
-// })
-// })}
+    }
 
-}
-getEmployees({
-    return this.employees
-})
+
+    // write HTML string to file ./dist/index.html
+
+};
+
+buildTeam();

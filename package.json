@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "start": "node index"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@
 
 ## Description
 
-I created this Team Profile Generator to gain practice with 
+I created this Team Profile Generator to gain practice with building a Node.js command-line application. In the application information is gathered about employees on a software engineeringg team and an HTML webpage is built with the information on each employee.
 
 ## Table of Contents (Optional)
 
@@ -16,7 +16,7 @@ I created this Team Profile Generator to gain practice with
 
 ## Installation
 
-N/A
+The team profile generator requires installation of Node.js as well as the Inquirer package.
 
 ## Usage
 
@@ -25,7 +25,10 @@ Here is a link to a walk through of using the Team Profile Generator:
 ## Technologies
 
 Team-Profile-Generator uses a number of technologies:
-- 
+- Node.js
+- Javascript
+- Inquirer
+- Jest
 
 
 ## Credits
@@ -43,11 +46,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
 ## Features
 
@@ -55,8 +53,12 @@ N/A
 
 ## How to Contribute
 
-Not looking fo any contributors at this time 
+Not looking fo any contributtions at this time 
 
 ## Tests
 
-N/A
+Tests were run using Jest for each of the app's classes (Employee, Manager, Engineer, and Intern) to validate that the contructors stored properties on objects correctly and that the methods were set up correctly. All tests for these classes pass.
+
+To test, install Jest and run npm test.
+
+You can find the 4 files for the tests in the tests folder.

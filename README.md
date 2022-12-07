@@ -1,18 +1,16 @@
 # <Team-Profile Generator>
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+I created this Team Profile Generator to gain practice with 
 
 ## Table of Contents (Optional)
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Technologies](#technologies)
 - [Credits](#credits)
 - [License](#license)
 
@@ -22,6 +20,12 @@ N/A
 
 ## Usage
 
+Here is a link to a walk through of using the Team Profile Generator:
+
+## Technologies
+
+Team-Profile-Generator uses a number of technologies:
+- 
 
 
 ## Credits
@@ -47,10 +51,12 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 
 ## Features
 
-If your project has a lot of features, list them here.
+N/A
 
 ## How to Contribute
 
 Not looking fo any contributors at this time 
 
 ## Tests
+
+N/A

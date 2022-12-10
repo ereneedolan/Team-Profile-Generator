@@ -3,6 +3,7 @@ const fs = require('fs')
 const Manager = require('./lib/Manager.js');
 const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
+const generateHTML = require('./dist/generateHTML')
 
 let team=[];
 
@@ -54,7 +55,7 @@ function buildTeam(){
       }else if(choice === "add an intern"){
         addIntern()
       }else {
-        generateHTML()
+        writeHTML()
       }
     })
 }
@@ -130,7 +131,7 @@ function addIntern(){
     // write html string to ./dist/index.html  
    // generate HTML string (HTML) with data from employees array  
    
-   function generateHTML(){
+   function writeHTML(){
     fs.writeFileSync("dist/index.html", generateHTML(team))
    }
 

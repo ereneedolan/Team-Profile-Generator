@@ -20,7 +20,7 @@ The team profile generator requires installation of Node.js as well as the Inqui
 
 ## Usage
 
-Here is a link to a walk through of using the Team Profile Generator: https://drive.google.com/file/d/1f7mMfLq6-Bu9mRcDbE2YiF6ecMiJiIvB/view
+Here is a link to a walk through of using the Team Profile Generator: https://drive.google.com/file/d/16BquxcSGxbyC96XVqfa6hmIA1pmWKvww/view
 
 ## Technologies
 
